@@ -1,16 +1,12 @@
-# makeup_app_flutter
+# Makeup App Flutter
 
-A new Flutter project.
+This Flutter app fetches makeup product data from the [Dummy JSON API](https://dummyjson.com/products?limit=10) and displays it.
 
-## Getting Started
+## Architecture
 
-This project is a starting point for a Flutter application.
+- **State Management**: The app uses `StatefulWidget` for managing state locally in the `HomeScreen`. Products are fetched asynchronously when the screen is initialized using `FutureBuilder`.
+- **Network Service**: `NetworkService` class is used to fetch the list of products from the API. It makes use of the `http` package to make the API call and parse the data into the `Product` model.
 
-A few resources to get you started if this is your first Flutter project:
+## Screens
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Home Screen**: Displays the list of products fetched from the API.
